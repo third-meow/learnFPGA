@@ -1,4 +1,4 @@
-module simpler_light_toggle (
+module top (
 	input PIN_1,  // pin one
 	output LED,  // onboard led
 );

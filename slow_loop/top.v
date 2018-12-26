@@ -1,4 +1,4 @@
-module slow_loopl (
+module top (
     input CLK,
     output LED,
 );

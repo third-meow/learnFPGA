@@ -1,4 +1,4 @@
-module numbers (
+module top(
     input CLK,
     output LED,
 );
