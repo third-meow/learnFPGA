@@ -8,26 +8,26 @@ module light_toggle (
     //disable usb
     assign USBPU = 0;
 
-
-    // pin one's current and last state
-    reg button_state;
-    reg button_prev_state;
-
     //register to store led state (eg 0 or 1 {0 = off, 1 = on})
     reg led_state;
 
+    //slow loop counter
+    reg [23:0] count;
+
     //runs every clock cycle
     always @(posedge CLK) begin
-        //get button state
-        button_state = PIN_1;
+        count <= count + 1;
+        if (count == (16000000 / 4)) begin
+            count <= 0;
 
-        //if button has just been presssed
-        if (button_state && !button_prev_state) begin
-            led_state = !led_state;
+            //runs every 250ms
+
+            //if button is pressed
+            if (PIN_1) begin
+                led_state = !led_state;
+            end
+
         end
-
-        //set prev button state
-        button_prev_state = button_state;
     end
 
     //send led the led_state register
