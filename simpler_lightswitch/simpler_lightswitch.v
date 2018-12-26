@@ -1,4 +1,4 @@
-module lightswitch (
+module simpler_lightswitch (
 	input CLK,   // 16MHz clock
 	input PIN_1,  // pin one
 	output LED,  // onboard led
