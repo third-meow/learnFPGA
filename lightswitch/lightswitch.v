@@ -6,7 +6,7 @@ module lightswitch (
 );
 
     //disable usb
-    assign USB = 0;
+    assign USBPU = 0;
 
     //regiter to store led state (eg 0 or 1 {0 = off, 1 = on})
     reg led_state;
