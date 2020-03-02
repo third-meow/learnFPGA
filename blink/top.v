@@ -13,7 +13,7 @@ module top (
 
     // wire driver
     // led pattern
-    wire [21:0] blink_pattern = 22'b00000011110000101;
+    wire [21:0] blink_pattern = 22'b01010101101010111;
 
     always @(posedge CLK) begin
         // increment blink_counter
