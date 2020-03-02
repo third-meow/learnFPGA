@@ -17,7 +17,7 @@ module top (
     //runs every clock cycle
     always @(posedge CLK) begin
         count <= count + 1;
-        if (count == (16000000 / 4)) begin
+        if (count == (16000000 / 2)) begin
             count <= 0;
 
             //runs every 250ms
